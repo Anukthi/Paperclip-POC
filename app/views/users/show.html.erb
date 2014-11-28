@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p style="background: rgb(214, 205, 205);">
+  <b>Avatar:</b>
+   Mini: <%= image_tag @user.avatar.url(:mini) %>
+   ------------------------------------------------------
+   <br/><br/><br/>
+   Small: <%= image_tag @user.avatar.url(:small) %>
+   ------------------------------------------------------
+   <br/><br/><br/><br/>
+   Product: <%= image_tag @user.avatar.url(:product) %>
+  ------------------------------------------------------
+  <br/><br/><br/>
+   large: <%= image_tag @user.avatar.url(:large) %>
+  ------------------------------------------------------
+  <br/><br/>
+   angled: <%= image_tag @user.avatar.url(:angled) %>
+
+</p>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
